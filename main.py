@@ -15,7 +15,7 @@ def generate_combinations(letters) -> list[str]:
     return combinations
 
 
-def check_combination(combination: str) -> int:
+def check_combination(combination: str) -> None:
     response = get(BASE_URL + combination)
     print(f'{combination} - {response.status_code}')
     if response.status_code == 200:
@@ -24,7 +24,7 @@ def check_combination(combination: str) -> int:
             f.write(combination + '\n')
 
 
-def main():
+def main() -> None:
     combinations = generate_combinations(LETTERS)
     threads = []
 
