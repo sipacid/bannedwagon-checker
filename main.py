@@ -17,7 +17,7 @@ def generate_combinations(letters) -> list[str]:
 
 def check_combination(combination: str) -> int:
     response = requests.get(BASE_URL + combination)
-    print(combination + ' - ' + str(response.status_code))
+    print(f'{combination} - {response.status_code}')
     if response.status_code == 200:
         FOUND.append(combination)
         with (open('found.txt', 'a')) as f:
