@@ -37,7 +37,7 @@ def main():
 
     for thread in threads:
         thread.join()
-        print(f'Found {len(FOUND)} codes: {FOUND}')
+    print(f'Found {len(FOUND)} codes: {FOUND}')
     return
 
 
